@@ -51,9 +51,6 @@ public class OfferServiceImpl implements OfferService {
     @Autowired
     EmailSender emailSender;
 
-    @Autowired
-    private DrugService drugService;
-
     @Override
     public List<Offer> getOfferByIdSupplier(UUID id) {
         return offerRepository.getOfferBySupplier(id);

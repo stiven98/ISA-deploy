@@ -25,13 +25,6 @@ public class DrugOrderController {
     @Autowired
     private DrugOrderService drugOrderService;
 
-    @Autowired
-    private SupplierService supplierService;
-
-    @Autowired
-    private OfferService offerService;
-
-
     @PreAuthorize("hasAnyRole('ROLE_PH_ADMIN')")
     @PostMapping("/createOrder")
     public ResponseEntity<DrugOrder> createDrugOrder(@RequestBody DrugOrderDTO drugOrder) {

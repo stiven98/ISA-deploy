@@ -21,8 +21,6 @@ public class VacationController {
     @Autowired
     VacationService vacationService;
 
-
-
     @PreAuthorize("hasAnyRole('ROLE_PH_ADMIN')")
     @GetMapping("/all")
     public ResponseEntity<List<VacationDTO>> getAllVacationRequestFromPharmacist(){

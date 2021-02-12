@@ -29,7 +29,6 @@ import java.util.Map;
 public class DermatologistController {
 
     @Autowired
-
     private UserService userService;
 
     @Autowired

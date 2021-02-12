@@ -22,12 +22,6 @@ public class PharmacyServiceImpl implements PharmacyService {
     @Autowired
     private PharmacyRepository pharmacyRepository;
 
-    @Autowired
-    private ExaminationService examinationService;
-
-    @Autowired
-    private PatientService patientService;
-
     @Override
     public List<Pharmacy> findAll() {
         return pharmacyRepository.findAll();
