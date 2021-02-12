@@ -146,9 +146,9 @@ public class PharmacistServiceImpl implements PharmacistService {
         pharmacist.getLoginInfo().setPassword("$2y$10$FEUww.MoQd8La2ZVp05CD.3Pum8kpy25PdMszrLvlWifF6JguCzQy");//123
         pharmacist.getLoginInfo().setEmail(dto.getUser().getEmail());
         pharmacist.setWorkTime(this.createWorkTime(dto,ph,pharmacist));
+        pharmacist.setLocation(location);
         pharmacist.setAuthorities(authorityService.findByRole("ROLE_PHARMACIST"));
         pharmacist.setAverageMark(0.0);
-        pharmacist.setLocation(location);
         pharmacist = pharmacistRepository.save(pharmacist);
         return pharmacist;
 
